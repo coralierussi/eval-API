@@ -2,9 +2,10 @@ import cors from "cors";
 import "dotenv/config";
 import express from "express";
 
-import { usersRouter } from "./router/users";
-//import { checkToken } from "./middlewares/checkToken";
-import { authRouter } from "./router/auth";
+import { usersRouter } from "./src/router/users";
+import { instrumentsRouter } from "./src/router/instruments";
+import { checkToken } from "./src/middlewares/checkToken";
+import { authRouter } from "./src/router/auth";
 
 const app = express();
 
@@ -13,7 +14,7 @@ app.use(express.json());
 
 const apiRouter = express.Router();
 apiRouter.use("/users", usersRouter)
-//apiRouter.use("/eleves", checkToken, elevesRouter)
+apiRouter.use("/instruments", checkToken, instrumentsRouter)
 apiRouter.use("/auth", authRouter)
 
 app.use("/api", apiRouter);

@@ -2,27 +2,26 @@ import { PrismaClient } from '@prisma/client'
 import { Router } from "express";
 import bcrypt from "bcrypt";
 
-export const usersRouter = Router();
+export const instrumentsRouter = Router();
 const prisma = new PrismaClient()
 
 
-usersRouter.post('/', async (req, res) => {
-  const {name, email, mdp} = req.body
+instrumentsRouter.post('/', async (req, res) => {
+  const {pseudo, motDePasse} = req.body
   const hashMdp = await bcrypt.hash(
-    mdp,
+    motDePasse,
     parseInt(process.env.SALT_ROUNDS!)
   )
   const NewUser = await prisma.user.create({
     data: {
-      email: name + "@gmail.com",
-      name: name,
-      mdp : hashMdp
+      pseudo: pseudo,
+      motDePasse : hashMdp
   }
   });
   res.status(201).json(NewUser);
 })
 
-usersRouter.get("/:id", async (req, res) => {
+instrumentsRouter.get("/:id", async (req, res) => {
   const myUsers = await prisma.user.findUnique({
     where: {
       id: parseInt(req.params.id)
@@ -37,7 +36,7 @@ usersRouter.get("/:id", async (req, res) => {
   }
 })
 
-usersRouter.put("/:id", async (req, res) => {
+instrumentsRouter.put("/:id", async (req, res) => {
   const myUsers: any = await prisma.user.findUnique({
     where: {
       id: parseInt(req.params.id)
@@ -48,14 +47,14 @@ usersRouter.put("/:id", async (req, res) => {
     return;
   }
   else {
-    myUsers.email = req.body.data.email;
-    myUsers.mdp = req.body.data.mdp;
+    myUsers.pseudo = req.body.data.pseudo;
+    myUsers.motDePasse = req.body.data.motDePasse;
     await myUsers.save();
     res.json(myUsers);
   }
 })
 
-usersRouter.get("/", async (req, res) => {
+instrumentsRouter.get("/", async (req, res) => {
     let users = await prisma.user.findMany();
     const pagination = req.query.pagination as { limit?: string, start?: string};
     if (pagination && pagination.limit) {
@@ -67,7 +66,7 @@ usersRouter.get("/", async (req, res) => {
 })
 
 
-usersRouter.delete("/:id", async (req, res) => {
+instrumentsRouter.delete("/:id", async (req, res) => {
   const myUsers: any = await prisma.user.findUnique({
     where: {
       id: parseInt(req.params.id)
