@@ -1,5 +1,5 @@
 ### Auth
-POST http://localhost:1337/api/auth/local
+POST http://localhost:1992/api/auth/local
 Content-Type: application/json
 
 {
@@ -8,7 +8,7 @@ Content-Type: application/json
 }
 
 ### User
-POST http://localhost:1337/api/users
+POST http://localhost:1992/api/users
 Content-Type: application/json
 
 {
@@ -17,10 +17,10 @@ Content-Type: application/json
 }
 
 ### User
-GET http://localhost:1337/api/users
+GET http://localhost:1992/api/users
 
 ### Classe
-POST http://localhost:1337/api/classes
+POST http://localhost:1992/api/classes
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsImVtYWlsIjoidGVzdGVyQGdtYWlsLmNvbSIsIm5hbWUiOiJ0ZXN0ZXIiLCJtZHAiOiIkMmIkMTAkbVJ5cFY3S3d6bUx4eDA4MVhrc0NodVY3WjBzQVJtU3hOYnFKdmtiMTdQMDZNeVpZaWZ5SHkiLCJpYXQiOjE3Mzg4MzcwMjh9.reIRbfQnAnOnoXZaFiT5PyTBXwDZo6yTs_JCmafyHzA
 
@@ -29,11 +29,11 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsImVtYWlsI
 }
 
 ### Classe
-GET http://localhost:1337/api/classes
+GET http://localhost:1992/api/classes
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsImVtYWlsIjoidGVzdGVyQGdtYWlsLmNvbSIsIm5hbWUiOiJ0ZXN0ZXIiLCJtZHAiOiIkMmIkMTAkbVJ5cFY3S3d6bUx4eDA4MVhrc0NodVY3WjBzQVJtU3hOYnFKdmtiMTdQMDZNeVpZaWZ5SHkiLCJpYXQiOjE3Mzg4MzcwMjh9.reIRbfQnAnOnoXZaFiT5PyTBXwDZo6yTs_JCmafyHzA
 
 ### Eleve
-POST http://localhost:1337/api/eleves
+POST http://localhost:1992/api/eleves
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsImVtYWlsIjoidGVzdGVyQGdtYWlsLmNvbSIsIm5hbWUiOiJ0ZXN0ZXIiLCJtZHAiOiIkMmIkMTAkbVJ5cFY3S3d6bUx4eDA4MVhrc0NodVY3WjBzQVJtU3hOYnFKdmtiMTdQMDZNeVpZaWZ5SHkiLCJpYXQiOjE3Mzg4MzcwMjh9.reIRbfQnAnOnoXZaFiT5PyTBXwDZo6yTs_JCmafyHzA
 
@@ -43,12 +43,12 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsImVtYWlsI
 }
 
 ### Eleve
-GET http://localhost:1337/api/eleves
+GET http://localhost:1992/api/eleves
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsImVtYWlsIjoidGVzdGVyQGdtYWlsLmNvbSIsIm5hbWUiOiJ0ZXN0ZXIiLCJtZHAiOiIkMmIkMTAkbVJ5cFY3S3d6bUx4eDA4MVhrc0NodVY3WjBzQVJtU3hOYnFKdmtiMTdQMDZNeVpZaWZ5SHkiLCJpYXQiOjE3Mzg4MzcwMjh9.reIRbfQnAnOnoXZaFiT5PyTBXwDZo6yTs_JCmafyHzA
 
 
 ### Groupe
-POST http://localhost:1337/api/groupes
+POST http://localhost:1992/api/groupes
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsImVtYWlsIjoidGVzdGVyQGdtYWlsLmNvbSIsIm5hbWUiOiJ0ZXN0ZXIiLCJtZHAiOiIkMmIkMTAkbVJ5cFY3S3d6bUx4eDA4MVhrc0NodVY3WjBzQVJtU3hOYnFKdmtiMTdQMDZNeVpZaWZ5SHkiLCJpYXQiOjE3Mzg4MzcwMjh9.reIRbfQnAnOnoXZaFiT5PyTBXwDZo6yTs_JCmafyHzA
 
@@ -57,5 +57,5 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsImVtYWlsI
 }
 
 ### Groupe
-GET http://localhost:1337/api/groupes
+GET http://localhost:1992/api/groupes
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTMsImVtYWlsIjoidGVzdGVyQGdtYWlsLmNvbSIsIm5hbWUiOiJ0ZXN0ZXIiLCJtZHAiOiIkMmIkMTAkbVJ5cFY3S3d6bUx4eDA4MVhrc0NodVY3WjBzQVJtU3hOYnFKdmtiMTdQMDZNeVpZaWZ5SHkiLCJpYXQiOjE3Mzg4MzcwMjh9.reIRbfQnAnOnoXZaFiT5PyTBXwDZo6yTs_JCmafyHzA
