@@ -17,7 +17,7 @@ bananesRouter.post('/', async (req, res) => {
 })
 
 bananesRouter.get("/:id", async (req, res) => {
-  const myBananes = await prisma.instrument.findUnique({
+  const myBananes = await prisma.banane.findUnique({
     where: {
       id: parseInt(req.params.id)
     }
@@ -32,7 +32,7 @@ bananesRouter.get("/:id", async (req, res) => {
 })
 
 bananesRouter.put("/:id", async (req, res) => {
-  const myBananes: any = await prisma.instrument.findUnique({
+  const myBananes: any = await prisma.banane.findUnique({
     where: {
       id: parseInt(req.params.id)
     }
@@ -50,7 +50,7 @@ bananesRouter.put("/:id", async (req, res) => {
 })
 
 bananesRouter.get("/", async (req, res) => {
-    let instruments = await prisma.instrument.findMany();
+    let instruments = await prisma.banane.findMany();
     const pagination = req.query.pagination as { limit?: string, start?: string};
     if (pagination && pagination.limit) {
       let start = 0;
@@ -62,7 +62,7 @@ bananesRouter.get("/", async (req, res) => {
 
 
 bananesRouter.delete("/:id", async (req, res) => {
-  const myBananes: any = await prisma.instrument.findUnique({
+  const myBananes: any = await prisma.banane.findUnique({
     where: {
       id: parseInt(req.params.id)
     }

@@ -40,12 +40,25 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicHNldWRvIjoidGVzdGVyIiwibW90RGVQYXNzZSI6IiQyYiQxMCRPZmtKVzBmeVM4VWF3MnhJZGYzVDVPcUc3U2txU3hQS0V1ZC9vb2djckpkSW5lUkNmRzFxSyIsImlhdCI6MTczODg0OTY3NH0.fAP2uT4hAn267dJLLeEbOYH6Bw_AcpY6tIxhRm1XRkc
 
 {
-     "poids" : 5,
-     "name": "bananes",
-     "color": "jaune",
-     "prix": 2.5
+     "poids" : 2,
+     "name": "poires",
+     "color": "vert",
+     "prix": 1
 }
 
 ### Instruments
 GET http://localhost:1992/api/instruments
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicHNldWRvIjoidGVzdGVyIiwibW90RGVQYXNzZSI6IiQyYiQxMCRPZmtKVzBmeVM4VWF3MnhJZGYzVDVPcUc3U2txU3hQS0V1ZC9vb2djckpkSW5lUkNmRzFxSyIsImlhdCI6MTczODg0OTY3NH0.fAP2uT4hAn267dJLLeEbOYH6Bw_AcpY6tIxhRm1XRkc
+
+uthorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicHNldWRvIjoidGVzdGVyIiwibW90RGVQYXNzZSI6IiQyYiQxMCRPZmtKVzBmeVM4VWF3MnhJZGYzVDVPcUc3U2txU3hQS0V1ZC9vb2djckpkSW5lUkNmRzFxSyIsImlhdCI6MTczODg0OTY3NH0.fAP2uT4hAn267dJLLeEbOYH6Bw_AcpY6tIxhRm1XRkc
+
+
+### bananes
+POST http://localhost:1992/api/bananes
+Content-Type: application/json
+
+{   "couleur": "vert",
+     "prix": 1
+}
+
+### bananes
+GET http://localhost:1992/api/bananes

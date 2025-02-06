@@ -4,6 +4,7 @@ import express from "express";
 
 import { usersRouter } from "./src/router/users";
 import { instrumentsRouter } from "./src/router/instruments";
+import { bananesRouter } from "./src/router/bananes";
 import { checkToken } from "./src/middlewares/checkToken";
 import { authRouter } from "./src/router/auth";
 
@@ -15,6 +16,7 @@ app.use(express.json());
 const apiRouter = express.Router();
 apiRouter.use("/users", usersRouter)
 apiRouter.use("/instruments", checkToken,instrumentsRouter)
+apiRouter.use("/bananes", bananesRouter)
 apiRouter.use("/auth", authRouter)
 
 app.use("/api", apiRouter);
