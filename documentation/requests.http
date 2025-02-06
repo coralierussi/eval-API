@@ -41,8 +41,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicHNldWRvI
 
 {
      "poids" : 2,
-     "name": "poires",
-     "color": "vert",
+     "name": "fruits du dragon",
+     "color": "rose",
      "prix": 1
 }
 
@@ -56,9 +56,21 @@ uthorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicHNldWRvIj
 POST http://localhost:1992/api/bananes
 Content-Type: application/json
 
-{   "couleur": "vert",
-     "prix": 1
+{   "couleur": "jaune",
+     "prix": 2.5
 }
 
 ### bananes
 GET http://localhost:1992/api/bananes
+
+### reparations
+POST http://loicalhost:1992/api/reparations
+Content-Type: application/json
+
+{
+    "name": "Flute",
+    "prix": 5
+}
+
+### reparations delete
+DELETE http://localhost:1992/api/reparations/2

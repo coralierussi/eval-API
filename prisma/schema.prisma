@@ -25,10 +25,19 @@ model Instrument {
   name String
   color String
   prix Int
+  reparations Reparations[]
 }
 
 model Banane {
   id    Int     @id @default(autoincrement())
-  couleur  String
+  couleur String
   prix Int
+}
+
+model Reparations {
+  id    Int     @id @default(autoincrement())
+  name String
+  prix Int
+  instrumentId Int
+  instrument Instrument @relation(fields: [instrumentId], references: [id])
 }

@@ -23,7 +23,7 @@ bananesRouter.get("/:id", async (req, res) => {
     }
   });
   if(!myBananes) {
-    res.status(404).json({ message: "instrument not found" });
+    res.status(404).json({ message: "Bananes not found" });
     return;
   }
   else {
@@ -38,7 +38,7 @@ bananesRouter.put("/:id", async (req, res) => {
     }
   });
   if(!myBananes) {
-    res.status(404).json({ message: "instrument not found" });
+    res.status(404).json({ message: "Bananes not found" });
     return;
   }
   else {
@@ -68,11 +68,11 @@ bananesRouter.delete("/:id", async (req, res) => {
     }
   });
    if(!myBananes) {
-    res.status(404).json({ message: "instrument not found" });
+    res.status(404).json({ message: "Bananes not found" });
     return;
   }
   else {
     await myBananes.destroy();
-    res.json({ message: "instrument deleted" });
+    res.json({ message: "Bananesq deleted" });
   }
 })
