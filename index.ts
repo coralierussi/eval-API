@@ -14,7 +14,7 @@ app.use(express.json());
 
 const apiRouter = express.Router();
 apiRouter.use("/users", usersRouter)
-apiRouter.use("/instruments", checkToken, instrumentsRouter)
+apiRouter.use("/instruments", checkToken,instrumentsRouter)
 apiRouter.use("/auth", authRouter)
 
 app.use("/api", apiRouter);

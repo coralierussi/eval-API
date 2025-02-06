@@ -47,8 +47,8 @@ usersRouter.put("/:id", async (req, res) => {
     return;
   }
   else {
-    myUsers.pseudo = req.body.data.pseudo;
-    myUsers.motDePasse = req.body.data.motDePasse;
+    myUsers.pseudo = req.body.pseudo;
+    myUsers.motDePasse = req.body.motDePasse;
     await myUsers.save();
     res.json(myUsers);
   }

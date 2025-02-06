@@ -1,3 +1,12 @@
+### Auth
+POST http://localhost:1992/api/auth/local
+Content-Type: application/json
+
+{
+    "pseudo": "tester",
+    "motDePasse": "tester"
+}
+
 ### User
 POST http://localhost:1992/api/users
 Content-Type: application/json
@@ -10,13 +19,33 @@ Content-Type: application/json
 ### User
 GET http://localhost:1992/api/users
 
-### Classe
-POST http://localhost:1992/api/classes
+### User id select
+GET  http://localhost:1992/api/users/5
+
+### User modif
+PUT http://localhost:1992/api/users/5
 Content-Type: application/json
 
 {
-     "name" : "B3 dev"
+    "pseudo" : "Toto",
+    "motDePasse": "tester"
 }
 
-### Classe
-GET http://localhost:1992/api/classes
+### User delete
+DELETE http://localhost:1992/api/users/2
+
+### Instruments
+POST http://localhost:1992/api/instruments
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicHNldWRvIjoidGVzdGVyIiwibW90RGVQYXNzZSI6IiQyYiQxMCRPZmtKVzBmeVM4VWF3MnhJZGYzVDVPcUc3U2txU3hQS0V1ZC9vb2djckpkSW5lUkNmRzFxSyIsImlhdCI6MTczODg0OTY3NH0.fAP2uT4hAn267dJLLeEbOYH6Bw_AcpY6tIxhRm1XRkc
+
+{
+     "poids" : 5,
+     "name": "bananes",
+     "color": "jaune",
+     "prix": 2.5
+}
+
+### Instruments
+GET http://localhost:1992/api/instruments
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicHNldWRvIjoidGVzdGVyIiwibW90RGVQYXNzZSI6IiQyYiQxMCRPZmtKVzBmeVM4VWF3MnhJZGYzVDVPcUc3U2txU3hQS0V1ZC9vb2djckpkSW5lUkNmRzFxSyIsImlhdCI6MTczODg0OTY3NH0.fAP2uT4hAn267dJLLeEbOYH6Bw_AcpY6tIxhRm1XRkc
